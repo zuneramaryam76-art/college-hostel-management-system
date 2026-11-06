@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Students · Haven House</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">H</span>
+        <span>haven<span class="brand-sub">HOSTEL ADMIN</span></span>
+      </a>
+
+      <div class="nav-label">WORKSPACE</div>
+      <nav>
+        <a class="nav-link" href="index.html"><span>▦</span> Overview</a>
+        <a class="nav-link active" href="students.html"><span>♙</span> Students</a>
+        <a class="nav-link" href="update-student.html"><span>✎</span> Update student</a>
+        <a class="nav-link" href="rooms.html"><span>⌂</span> Rooms</a>
+        <a class="nav-link" href="allocations.html"><span>⇄</span> Allocations</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="mini-profile">
+          <div class="avatar">AW</div>
+          <div>
+            <strong>Alex Warren</strong>
+            <small>Hostel warden</small>
+          </div>
+          <span class="dots">···</span>
+        </div>
+        <small class="side-foot">A calmer way to manage campus living.</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="crumb">Workspace <span>/</span> Students</div>
+        <div class="top-actions">
+          <span class="today" id="today"></span>
+          <div class="avatar avatar-small">AW</div>
+        </div>
+      </header>
+
+      <section class="page-content">
+        <div class="welcome-row">
+          <div>
+            <div class="eyebrow"><i></i> RESIDENT DIRECTORY</div>
+            <h1>Students</h1>
+            <p class="lede">Your residents, all in one place. Keep their details up to date.</p>
+          </div>
+          <a class="button button-dark" href="update-student.html">＋ Add a student</a>
+        </div>
+
+        <div class="page-banner">
+          <div>
+            <span class="hero-kicker">A COMMUNITY THAT CARES</span>
+            <h2>Know the people who<br>make this place home.</h2>
+            <p>Find resident information quickly and keep family contacts close at hand.</p>
+          </div>
+          <img src="assets/students.svg" alt="Students in a campus community">
+        </div>
+
+        <div class="table-toolbar">
+          <div>
+            <h2>Student directory</h2>
+            <p><span id="student-count">0</span> registered residents</p>
+          </div>
+          <label class="search-box">
+            <span>⌕</span>
+            <input
+              id="student-search"
+              type="search"
+              placeholder="Search name, roll no. or branch"
+              aria-label="Search students">
+          </label>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>STUDENT</th>
+                <th>ROLL NUMBER</th>
+                <th>BRANCH</th>
+                <th>PHONE</th>
+                <th>PARENT PHONE</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="student-rows"></tbody>
+          </table>
+          <div class="empty-state" id="student-empty" hidden>
+            No students match your search.
+            <a href="update-student.html">Add or update a student</a>.
+          </div>
+        </div>
+
+        <div class="bottom-note">
+          Student details are stored in this browser for this demo.
+          <a href="update-student.html">Manage student records →</a>
+        </div>
+
+        <footer>HAVEN HOUSE <span>·</span> HOSTEL MANAGEMENT</footer>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Update student · Haven House</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">H</span>
+        <span>haven<span class="brand-sub">HOSTEL ADMIN</span></span>
+      </a>
+
+      <div class="nav-label">WORKSPACE</div>
+      <nav>
+        <a class="nav-link" href="index.html"><span>▦</span> Overview</a>
+        <a class="nav-link" href="students.html"><span>♙</span> Students</a>
+        <a class="nav-link active" href="update-student.html"><span>✎</span> Update student</a>
+        <a class="nav-link" href="rooms.html"><span>⌂</span> Rooms</a>
+        <a class="nav-link" href="allocations.html"><span>⇄</span> Allocations</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="mini-profile">
+          <div class="avatar">AW</div>
+          <div><strong>Alex Warren</strong><small>Hostel warden</small></div>
+          <span class="dots">···</span>
+        </div>
+        <small class="side-foot">A calmer way to manage campus living.</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="crumb">
+          Workspace <span>/</span> <a href="students.html">Students</a>
+          <span>/</span> Update student
+        </div>
+        <div class="top-actions">
+          <span class="today" id="today"></span>
+          <div class="avatar avatar-small">AW</div>
+        </div>
+      </header>
+
+      <section class="page-content">
+        <div class="welcome-row">
+          <div>
+            <div class="eyebrow"><i></i> RESIDENT DIRECTORY</div>
+            <h1>Student details</h1>
+            <p class="lede">Select a resident from the list, then update their information.</p>
+          </div>
+          <a class="button button-light" href="students.html">← Back to students</a>
+        </div>
+
+        <div class="page-banner slim-banner">
+          <div>
+            <span class="hero-kicker">HERE WHEN YOU NEED US</span>
+            <h2>Good records help<br>everyone feel at home.</h2>
+            <p>Accurate details help your team support every student.</p>
+          </div>
+          <img src="assets/update.svg" alt="Student records being updated">
+        </div>
+
+        <div class="edit-layout">
+          <section class="panel student-picker">
+            <div class="panel-head">
+              <div>
+                <h3>Choose a student</h3>
+                <p>Select a row to load their details</p>
+              </div>
+              <span class="count-chip" id="picker-count">0</span>
+            </div>
+
+            <label class="search-box picker-search">
+              <span>⌕</span>
+              <input id="picker-search" type="search"
+                     placeholder="Find a student" aria-label="Find a student">
+            </label>
+
+            <div class="student-list" id="student-picker-list"></div>
+            <div class="empty-state picker-empty" id="picker-empty" hidden>
+              No students found. <a href="#student-form">Add the first student</a>.
+            </div>
+          </section>
+
+          <section class="panel form-panel" id="student-form">
+            <div class="panel-head">
+              <div>
+                <h3 id="form-title">Add a student</h3>
+                <p id="form-description">Enter the resident's details below</p>
+              </div>
+              <span class="required-note">* Required</span>
+            </div>
+
+            <form id="student-form-fields">
+              <input type="hidden" id="student-id">
+
+              <div class="form-grid">
+                <label class="field span-two">
+                  <span>Full name *</span>
+                  <input id="name" required maxlength="100" placeholder="e.g. Maya Patel">
+                </label>
+
+                <label class="field">
+                  <span>Roll number *</span>
+                  <input id="roll_no" required maxlength="30" placeholder="e.g. CS2026-041">
+                </label>
+
+                <label class="field">
+                  <span>Branch *</span>
+                  <input id="branch" required maxlength="50" placeholder="e.g. Computer Science">
+                </label>
+
+                <label class="field">
+                  <span>Student phone *</span>
+                  <input id="phone" required maxlength="15" type="tel" placeholder="e.g. +91 98765 43210">
+                </label>
+
+                <label class="field">
+                  <span>Parent / guardian phone *</span>
+                  <input id="parent_phone" required maxlength="15" type="tel" placeholder="e.g. +91 98765 12345">
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <button class="button button-light" type="button" id="reset-form">Clear form</button>
+                <button class="button button-dark" type="submit">Save student</button>
+              </div>
+              <p class="form-message" id="form-message" role="status" aria-live="polite"></p>
+            </form>
+          </section>
+        </div>
+
+        <footer>HAVEN HOUSE <span>·</span> HOSTEL MANAGEMENT</footer>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Allocations · Haven House</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">H</span>
+        <span>haven<span class="brand-sub">HOSTEL ADMIN</span></span>
+      </a>
+
+      <div class="nav-label">WORKSPACE</div>
+      <nav>
+        <a class="nav-link" href="index.html"><span>▦</span> Overview</a>
+        <a class="nav-link" href="students.html"><span>♙</span> Students</a>
+        <a class="nav-link" href="update-student.html"><span>✎</span> Update student</a>
+        <a class="nav-link" href="rooms.html"><span>⌂</span> Rooms</a>
+        <a class="nav-link active" href="allocations.html"><span>⇄</span> Allocations</a>
+      </nav>
+
+      <div class="sidebar-bottom">
+        <div class="mini-profile">
+          <div class="avatar">AW</div>
+          <div><strong>Alex Warren</strong><small>Hostel warden</small></div>
+          <span class="dots">···</span>
+        </div>
+        <small class="side-foot">A calmer way to manage campus living.</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="crumb">Workspace <span>/</span> Allocations</div>
+        <div class="top-actions">
+          <span class="today" id="today"></span>
+          <div class="avatar avatar-small">AW</div>
+        </div>
+      </header>
+
+      <section class="page-content">
+        <div class="welcome-row">
+          <div>
+            <div class="eyebrow"><i></i> RESIDENCE TRACKER</div>
+            <h1>Room allocations</h1>
+            <p class="lede">A smooth move-in starts with a little planning.</p>
+          </div>
+          <a href="#allocation-form" class="button button-dark">＋ New allocation</a>
+        </div>
+
+        <div class="page-banner">
+          <div>
+            <span class="hero-kicker">A PLACE FOR EVERYONE</span>
+            <h2>Move in, settle in,<br>feel at home.</h2>
+            <p>See who’s moving in and out, and make room for the next chapter.</p>
+          </div>
+          <img src="assets/allocations.svg" alt="A student settling into a hostel">
+        </div>
+
+        <div class="allocation-layout">
+          <section class="panel form-panel" id="allocation-form">
+            <div class="panel-head">
+              <div>
+                <h3>New allocation</h3>
+                <p>Assign a student to an available room</p>
+              </div>
+            </div>
+
+            <form id="allocation-fields">
+              <div class="form-grid">
+                <label class="field span-two">
+                  <span>Student *</span>
+                  <select id="allocation-student" required></select>
+                </label>
+
+                <label class="field span-two">
+                  <span>Room *</span>
+                  <select id="allocation-room" required></select>
+                </label>
+
+                <label class="field">
+                  <span>Allocation date *</span>
+                  <input id="allocation-date" required type="date">
+                </label>
+
+                <label class="field">
+                  <span>Expected vacate date</span>
+                  <input id="vacate-date" type="date">
+                </label>
+              </div>
+
+              <div class="form-actions">
+                <button class="button button-dark" type="submit">Create allocation</button>
+              </div>
+              <p class="form-message" id="allocation-message" role="status" aria-live="polite"></p>
+            </form>
+          </section>
+
+          <aside class="allocation-aside">
+            <img src="assets/allocations.svg" alt="" class="aside-art">
+            <span class="hero-kicker">A LITTLE CHECK-IN</span>
+            <h3>Room for a fresh start.</h3>
+            <p>Before confirming, make sure the student’s contact information is current.</p>
+            <a class="text-link" href="update-student.html">Review student details <span>↗</span></a>
+          </aside>
+        </div>
+
+        <div class="table-toolbar allocation-toolbar">
+          <div>
+            <h2>Allocation history</h2>
+            <p>Current stays and recent move-outs</p>
+          </div>
+          <label class="search-box">
+            <span>⌕</span>
+            <input id="allocation-search" type="search"
+                   placeholder="Search student, room or status"
+                   aria-label="Search allocations">
+          </label>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>STUDENT</th>
+                <th>ROOM</th>
+                <th>BLOCK</th>
+                <th>ALLOCATED</th>
+                <th>VACATE DATE</th>
+                <th>STATUS</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="allocation-rows"></tbody>
+          </table>
+          <div class="empty-state" id="allocation-empty" hidden>
+            No allocations match your search.
+          </div>
+        </div>
+
+        <footer>HAVEN HOUSE <span>·</span> HOSTEL MANAGEMENT</footer>
+      </section>
+    </main>
+  </div>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

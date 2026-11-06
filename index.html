@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overview · Haven House</title>
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">H</span>
+        <span>haven<span class="brand-sub">HOSTEL ADMIN</span></span>
+      </a>
+      <div class="nav-label">WORKSPACE</div>
+      <nav>
+        <a class="nav-link active" href="index.html"><span>▦</span> Overview</a>
+        <a class="nav-link" href="students.html"><span>♙</span> Students</a>
+        <a class="nav-link" href="update-student.html"><span>✎</span> Update student</a>
+        <a class="nav-link" href="rooms.html"><span>⌂</span> Rooms</a>
+        <a class="nav-link" href="allocations.html"><span>⇄</span> Allocations</a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="mini-profile">
+          <div class="avatar">AW</div>
+          <div><strong>Alex Warren</strong><small>Hostel warden</small></div>
+          <span class="dots">···</span>
+        </div>
+        <small class="side-foot">A calmer way to manage campus living.</small>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="crumb">Workspace <span>/</span> Overview</div>
+        <div class="top-actions">
+          <span class="today" id="today"></span>
+          <div class="avatar avatar-small">AW</div>
+        </div>
+      </header>
+
+      <section class="page-content">
+        <div class="welcome-row">
+          <div>
+            <div class="eyebrow"><i></i> HOSTEL OVERVIEW</div>
+            <h1>A good day to get organized.</h1>
+            <p class="lede">Here’s what’s happening across your hostel today.</p>
+          </div>
+          <a class="button button-dark" href="allocations.html">＋ New allocation</a>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-copy">
+            <span class="hero-kicker">A PLACE TO BELONG</span>
+            <h2>Every student deserves<br>to feel at home.</h2>
+            <p>Keep rooms, residents, and move-ins in sync — all in one thoughtful workspace.</p>
+            <a href="students.html" class="text-link">Explore students <span>↗</span></a>
+          </div>
+          <img class="hero-image" src="assets/dashboard.svg" alt="Welcoming student residence">
+        </div>
+
+        <div class="section-heading">
+          <div><h2>Your hostel at a glance</h2><p>Live snapshot of rooms and residents</p></div>
+          <span class="status-pill"><i></i> All systems normal</span>
+        </div>
+
+        <div class="stat-grid">
+          <article class="stat-card">
+            <div class="stat-top"><span>Total students</span><span class="stat-icon lilac">♙</span></div>
+            <strong id="stat-students">—</strong><small>Registered residents</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Available rooms</span><span class="stat-icon mint">⌂</span></div>
+            <strong id="stat-rooms">—</strong><small>Ready for allocation</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Active allocations</span><span class="stat-icon peach">⇄</span></div>
+            <strong id="stat-allocations">—</strong><small>Current stays</small>
+          </article>
+          <article class="stat-card">
+            <div class="stat-top"><span>Occupancy</span><span class="stat-icon blue">◉</span></div>
+            <strong id="stat-occupancy">—</strong><small>Of total room capacity</small>
+          </article>
+        </div>
+
+        <div class="dashboard-bottom">
+          <section class="panel activity-panel">
+            <div class="panel-head">
+              <div><h3>Quick access</h3><p>Jump into your day-to-day work</p></div>
+            </div>
+            <div class="quick-grid">
+              <a href="students.html"><span class="quick-icon lilac">♙</span><span><strong>Student directory</strong><small>View and manage residents</small></span><b>↗</b></a>
+              <a href="rooms.html"><span class="quick-icon mint">⌂</span><span><strong>Room overview</strong><small>Check capacity and status</small></span><b>↗</b></a>
+              <a href="allocations.html"><span class="quick-icon peach">⇄</span><span><strong>Room allocations</strong><small>Manage move-ins and move-outs</small></span><b>↗</b></a>
+            </div>
+          </section>
+          <aside class="tip-card">
+            <span class="tip-symbol">✳</span>
+            <span class="hero-kicker">WARDEN'S NOTE</span>
+            <h3>Small details make a big difference.</h3>
+            <p>Keep student contact details current so families can always be reached when it matters.</p>
+            <a class="text-link" href="update-student.html">Review student details <span>↗</span></a>
+          </aside>
+        </div>
+        <footer>HAVEN HOUSE <span>·</span> HOSTEL MANAGEMENT</footer>
+      </section>
+    </main>
+  </div>
+  <script src="assets/app.js"></script>
+</body>
+</html>
